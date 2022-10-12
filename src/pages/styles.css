@@ -1,0 +1,30 @@
+.swiper-pagination {
+    position: static;
+    margin-top: 35px;
+}
+
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 40px;
+    border: 7px solid #1D4ED8;
+    background-color: white;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #1D4ED8;
+}
+
+@media (width<1010px) {
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+}
+@media (width<550px) {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-width: 3px;
+    }
+}
