@@ -65,12 +65,12 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           We Provide Best Services For Business
         </h2>
         <div className="grid py-3 msm:py-16 gap-12 w-full grid-cols-1 msm:grid-cols-2">
-          <ServicesBox bg="bg-my-yellow" phone="show" />
-          <ServicesBox bg="bg-my-blue" phone="show" />
-          <ServicesBox bg="bg-Primary-Colour" />
-          <ServicesBox bg="bg-my-green" />
-          <ServicesBox bg="bg-my-blue" />
-          <ServicesBox bg="bg-my-green" />
+        <ServicesBox icon="Product Devlopement.png" bg="bg-my-yellow" phone="show" />
+          <ServicesBox icon="Web Developement.png" bg="bg-my-blue" phone="show" />
+          <ServicesBox icon="iot.png" bg="bg-Primary-Colour" />
+          <ServicesBox icon="SMS.png" bg="bg-my-green" />
+          <ServicesBox icon="Data Analytics.png" bg="bg-my-blue" />
+          <ServicesBox icon="Enterprise Mobility.png" bg="bg-my-green" />
         </div>
       </div>
       <div ref={industriesRef} className="bg-secondary-2 h-fit relative py-16 ">
