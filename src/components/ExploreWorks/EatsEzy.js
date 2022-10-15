@@ -19,7 +19,7 @@ export default function EatsEzy({state}) {
                 <p className='text-xl mt-4 mb-5 font-semibold'>{state.shortDesc}</p>
                 <p className='text-xl font-semibold'>{state.Description}</p>
             </div>
-            <img className='w-1/2 m-auto' src={state.image} alt="" srcset="" />
+            <img className='w-[50vw] m-auto' src={state.image} alt="" srcset="" />
         </div>
     )
 }
