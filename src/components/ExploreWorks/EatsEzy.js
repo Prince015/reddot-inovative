@@ -14,12 +14,12 @@ export default function EatsEzy({state}) {
     // }, []);
     return (
         <div className={`${state.bg} flex max-w-[75vw]`}>
-            <div className='text-white flex flex-col mx-auto justify-center pl-5'>
+            <div className='text-white flex flex-col mx-auto justify-center pl-4 mvsm:pl-6 md:pl-20 msm:pl-10'>
                 <h3 className='text-4xl lg:text-5xl xl:text-6xl font-bold'>{state.title}</h3>
-                <p className='text-xl mt-4 mb-5 font-semibold'>{state.shortDesc}</p>
-                <p className='text-xl font-semibold'>{state.Description}</p>
+                <p className='text-xl mt-4 mb-5 lg:font-semibold'>{state.shortDesc}</p>
+                <p className='text-xl lg:font-semibold'>{state.Description}</p>
             </div>
-            <img className='w-1/2 m-auto' src={state.image} alt="" srcset="" />
+            <img className='w-[41%] m-auto' src={state.image} alt="" srcset="" />
         </div>
     )
 }

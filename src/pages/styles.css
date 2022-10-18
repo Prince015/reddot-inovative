@@ -10,6 +10,10 @@
     background-color: white;
 }
 
+.swiper-button-prev,.swiper-button-next{
+    display: none;
+}
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background-color: #1D4ED8;
 }

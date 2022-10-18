@@ -4,7 +4,7 @@ import FooterBottom from '../components/Footer/FooterBottom'
 
 export default function ContactUs() {
     return (
-        <div className="w-full mvsm:mt-8 top-[10vh] absolute">
+        <div className="w-full mvsm:mt-8 top-24 absolute">
             <div className="relative  z-[-1] h-[70vh] msm:h-[60vh] lg:h-[80vh] xl:h-[90vh] px-6 mx-0 bg-secondary-2 md:mx-8 ">
                 <div className=''>
                     <h1 className="text-2xl pt-16 mvsm:pt-16 vsm:text-3xl sm:text-4xl mvsm:text-5xl md:text-7xl  xl:text-8xl text-white font-black">
@@ -57,12 +57,9 @@ export default function ContactUs() {
                 </form>
             </div>
             <div className='my-14'>
-                <ContactUsBox country='SINGAPORE' address='7 TEMASEK BOULEVARD #12-07, SUNTEC 
-TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='about-us-pattern.png' bg='bg-[#FFC8D2]'/>
-                <ContactUsBox country='INDIA' address='7 TEMASEK BOULEVARD #12-07, SUNTEC 
-TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='india-office.png' bg='bg-[#CBE5FF]'/>
-                <ContactUsBox country='UAE' address='7 TEMASEK BOULEVARD #12-07, SUNTEC 
-TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='uae-office.png' bg='bg-[#FEE5AB]'/>
+                <ContactUsBox country='SINGAPORE' address='7 TEMASEK BOULEVARD #12-07, SUNTEC TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='about-us-pattern.png' bg='bg-[#FFC8D2]' />
+                <ContactUsBox country='INDIA' address='7 TEMASEK BOULEVARD #12-07, SUNTEC TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='india-office.png' bg='bg-[#CBE5FF]' />
+                <ContactUsBox country='UAE' address='7 TEMASEK BOULEVARD #12-07, SUNTEC TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='uae-office.png' bg='bg-[#FEE5AB]' />
             </div>
             <FooterBottom />
         </div>

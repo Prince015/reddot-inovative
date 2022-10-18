@@ -3,48 +3,87 @@ import Footer from "../components/Footer/Footer";
 import FooterBottom from "../components/Footer/FooterBottom";
 import ServicesBox from "../components/Services/ServicesBox";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ReactTypingEffect from 'react-typing-effect';
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "./styles.css";
 
-// import required modules
+
 import { Autoplay, Pagination, Navigation } from "swiper";
 import TestimonialBox from "../components/Testimonial/TestimonialBox";
 import { Link } from "react-router-dom";
 export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, industriesRef, servicesRef }) {
   return (
-    <div className=" top-[10vh] h-[90vh] fixed overflow-y-auto">
-      <div ref={homeRef} className="px-4  flex  mvsm:px-6 md:px-20 msm:px-10">
-        <div>
-          <h1 className="text-2xl min-w-fit vsm:text-3xl sm:text-4xl mvsm:text-5xl md:text-7xl  xl:text-8xl text-secondary-2 font-black">
-            We Can Help You <br />{" "}
-            <span className="text-Primary-Colour">Innovate</span> Your <br />{" "}
-            Business
-          </h1>
-          <p className=" mt-7 text-lg">
-            Bring your idea to life in no time.Here at Red Dot Innovative we
-            focus on technology, innovation to accelerate your business.
-          </p>
-          <button onClick={() => {
-            executeScroll(ourWorksRef);
-          }} className=" mt-7 min-w-fit bg-secondary px-14 rounded-sm py-2 text-white font-bold text-base">
-            Our Work
-          </button>
+    <div className="absolute h-screen snap-mandatory scroll-pt-24 layout overflow-auto snap-y">
+      <div ref={homeRef} className="h-screen pt-24 snap-start  px-4 mvsm:px-6 md:px-20 msm:px-10">
+        <div className="flex">
+          <div className="relative w-full">
+            <h1 className="text-2xl min-w-fit vsm:text-3xl sm:text-4xl mvsm:text-5xl md:text-7xl  xl:text-8xl text-secondary-2 font-black">
+              We Can Help You <br />{" "}
+              <span className="text-Primary-Colour">
+
+
+                <ReactTypingEffect
+                  text={["Innovate", "Automate", "Acclerate"]}
+                  speed={200}
+                  eraseSpeed={200}
+                  eraseDelay={2000}
+                  typingDelay={2000}
+                  cursor="_"
+                />
+              </span> Your <br />{" "}
+              Business
+            </h1>
+            <p className=" mt-7 max-w-lg text-lg">
+              Bring your idea to life in no time.Here at Red Dot Innovative we
+              focus on technology, innovation to accelerate your business.
+            </p>
+            <button onClick={() => {
+              executeScroll(ourWorksRef);
+            }} className=" mt-7 min-w-fit bg-secondary px-14 rounded-sm py-2 text-white font-bold text-base">
+              Our Work
+            </button>
+            <div className=" absolute top-28 justify-center items-center right-0 hidden lg:flex w-[41%] ">
+              <img src="bg circles.svg" alt="" />
+              <img className="absolute flex self-center" src="mobile-mockup.png" alt="" />
+            </div>
+          </div>
+
         </div>
-        <div className=" self-end hidden lg:inline-block w-[41%] h-fit  ">
-          <img src="mobile-mockup.png" alt="" srcset="" />
-        </div>
+        
+        <svg onClick={() => {
+                executeScroll(aboutRef);
+              }} className="w-fit cursor-pointer left-1/2 -translate-x-1/2 absolute bottom-24 lg:mt-0" width="36" height="56" viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="56" fill="#C9C9C9" />
+          <g clip-path="url(#clip0_1_82)">
+            <rect width="1440" height="8983" transform="translate(-702 -814)" fill="white" />
+            <rect width="1440" height="785" transform="translate(-702 -694)" fill="white" />
+            <rect x="1" y="1" width="34" height="54" rx="17" stroke="#222638" stroke-width="2" />
+            <path d="M18 12L18 20" stroke="#222638" stroke-width="2" stroke-linecap="round" />
+          </g>
+          <defs>
+            <clipPath id="clip0_1_82">
+              <rect width="1440" height="8983" fill="white" transform="translate(-702 -814)" />
+            </clipPath>
+          </defs>
+        </svg>
       </div>
-      <div ref={aboutRef} className="px-4 mvsm:px-6 md:px-20 msm:px-10 bg-secondary-2 mt-[50vh] sm:mt-8  flex flex-col items-center py-16 gap-5">
+      <div ref={aboutRef} className=" snap-start px-4 mvsm:px-6 md:px-20 msm:px-10 bg-secondary-2  flex flex-col items-center py-16 gap-5">
         <h4 className="text-Primary-Colour tracking-widest font-semibold ">
           ABOUT US
         </h4>
         <h2 className="text-white text-center text-2xl msm:text-3xl md:text-4xl lg:text-6xl font-extrabold">
-          innovate . automate . acclerate
+          <ReactTypingEffect
+            text={["Innovate", "Automate", "Acclerate"]}
+            speed={100}
+        eraseSpeed={100}
+        eraseDelay={2000}
+        typingDelay={2000}
+        cursor="_"
+          />
         </h2>
         <p className="text-white mvsm:font-medium text-center">
           Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is
@@ -57,7 +96,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           Know More
         </Link >
       </div>
-      <div ref={servicesRef} className="px-4 mvsm:px-6 md:px-20 msm:px-10 bg-white flex flex-col items-center py-16 gap-5">
+      <div ref={servicesRef} className="snap-start px-4 mvsm:px-6 md:px-20 msm:px-10 bg-white flex flex-col items-center py-16 gap-5">
         <h4 className="text-Primary-Colour tracking-widest font-semibold ">
           SERVICES
         </h4>
@@ -65,7 +104,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           We Provide Best Services For Business
         </h2>
         <div className="grid py-3 msm:py-16 gap-12 w-full grid-cols-1 msm:grid-cols-2">
-        <ServicesBox icon="Product Devlopement.png" bg="bg-my-yellow" phone="show" />
+          <ServicesBox icon="Product Devlopement.png" bg="bg-my-yellow" phone="show" />
           <ServicesBox icon="Web Developement.png" bg="bg-my-blue" phone="show" />
           <ServicesBox icon="iot.png" bg="bg-Primary-Colour" />
           <ServicesBox icon="SMS.png" bg="bg-my-green" />
@@ -73,7 +112,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           <ServicesBox icon="Enterprise Mobility.png" bg="bg-my-green" />
         </div>
       </div>
-      <div ref={industriesRef} className="bg-secondary-2 h-fit relative py-16 ">
+      <div ref={industriesRef} className="snap-start bg-secondary-2 h-fit relative py-16 ">
         <div className="px-4 mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
           <h4 className="text-Primary-Colour tracking-widest font-semibold ">
             INDUSTRIES
@@ -83,32 +122,32 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           </h2>
           <div className="hidden mvsm:flex mt-8 w-full  max-h-[500px] justify-center gap-2">
             <div className="w-[28%] relative h-auto">
-              <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="food-&-beverages.jpeg" alt="" srcset="" />
+              <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="food-&-beverages.jpeg" alt="" />
               <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                <img className="mx-auto" src="foodicon.svg" alt="" srcset="" />
+                <img className="mx-auto" src="foodicon.svg" alt="" />
                 <p className="text-lg font-bold text-white">Food & Beverages</p>
               </div>
             </div>
             <div className="flex max-h-[492px] box-border flex-1 gap-2 flex-col">
               <div className="h-1/2 relative">
-                <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="healthcare.jpeg" alt="" srcset="" />
+                <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="healthcare.jpeg" alt="" />
                 <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <img className="mx-auto" src="health-1.svg" alt="" srcset="" />
+                  <img className="mx-auto" src="health-1.svg" alt="" />
                   <p className="text-lg font-bold text-white">Healthcare</p>
                 </div>
               </div>
               <div className="h-1/2 relative">
-                <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="logistics.jpeg" alt="" srcset="" />
+                <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="logistics.jpeg" alt="" />
                 <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <img className="mx-auto" src="logistic-icon.svg" alt="" srcset="" />
+                  <img className="mx-auto" src="logistic-icon.svg" alt="" />
                   <p className="text-lg font-bold text-white">Logistic</p>
                 </div>
               </div>
             </div>
             <div className="w-[28%] relative h-auto">
-              <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="agri.jpeg" alt="" srcset="" />
+              <img className="h-full hover:opacity-50 opacity-90 w-full object-cover" src="agri.jpeg" alt="" />
               <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                <img className="mx-auto" src="farming-1.svg" alt="" srcset="" />
+                <img className="mx-auto" src="farming-1.svg" alt="" />
                 <p className="text-lg font-bold text-white">Agriculture</p>
               </div>
             </div>
@@ -132,36 +171,36 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           >
             <SwiperSlide>
               <div className="w-full relative h-100px">
-                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="food-&-beverages.jpeg" alt="" srcset="" />
+                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="food-&-beverages.jpeg" alt="" />
                 <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <img className="mx-auto " src="foodicon.svg" alt="" srcset="" />
+                  <img className="mx-auto " src="foodicon.svg" alt="" />
                   <p className="text-lg font-bold text-white">Food & Beverages</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full relative h-100px">
-                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="healthcare.jpeg" alt="" srcset="" />
+                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="healthcare.jpeg" alt="" />
                 <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <img className="mx-auto " src="health-1.svg" alt="" srcset="" />
+                  <img className="mx-auto " src="health-1.svg" alt="" />
                   <p className="text-lg font-bold text-white">Healthcare</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full relative h-100px">
-                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="logistics.jpeg" alt="" srcset="" />
+                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="logistics.jpeg" alt="" />
                 <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <img className="mx-auto " src="logistic-icon.svg" alt="" srcset="" />
+                  <img className="mx-auto " src="logistic-icon.svg" alt="" />
                   <p className="text-lg font-bold text-white">Logistic</p>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="w-full relative h-100px">
-                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="agri.jpeg" alt="" srcset="" />
+                <img className="h-56 hover:opacity-50 opacity-100 w-full object-cover" src="agri.jpeg" alt="" />
                 <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                  <img className="mx-auto " src="farming-1.svg" alt="" srcset="" />
+                  <img className="mx-auto " src="farming-1.svg" alt="" />
                   <p className="text-lg font-bold text-white">Agriculture</p>
                 </div>
               </div>
@@ -169,8 +208,8 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           </Swiper>
         </div>
       </div>
-      <div ref={ourWorksRef} className="relative bg-black h-[60vh] mvsm:h-[90vh] my-16 py-16 flex flex-col items-center gap-5">
-        <img className="absolute top-0 left-0 h-full opacity-40 object-cover" src="our-work.png" alt="" srcset="" />
+      <div ref={ourWorksRef} className="snap-start relative bg-black h-screen my-16 py-16 flex flex-col items-center gap-5">
+        <img className="absolute top-0 left-0 h-full opacity-40 object-cover" src="our-work.png" alt="" />
         <h4 className="text-Primary-Colour relative tracking-widest font-semibold ">
           OUR WORK
         </h4>
@@ -181,7 +220,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           EXPLORE OUR WORK
         </Link>
       </div>
-      <div className="px-4 w-[100vw] bg-white  pb-16  mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
+      <div className="snap-start px-4 w-[100vw] bg-white  pb-16  mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
         <h4 className="text-Primary-Colour tracking-widest font-semibold ">
           OUR SUCCESS
         </h4>
@@ -206,46 +245,46 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           >
             <SwiperSlide>
               <div className="relative">
-                <img className="" src="EATSEZY.png" alt="" srcset="" />
+                <img className="" src="EATSEZY.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
                   <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >Eatsezy is singapore’s restaurant  <span className=" font-bold leading-3 sm:leading-3 text-sm  mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-Primary-Colour ">table booking app</span></p>
-                  <img className=" self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" srcset="" />
+                  <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="eatsezy-logo.png" alt="" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="relative">
-                <img className="" src="ofms.png" alt="" srcset="" />
+                <img className="" src="ofms.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
                   <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >OFMS is <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#F79635] "> a Luxury Real Estate and Facility Management.</span></p>
-                  <img className=" self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" srcset="" />
+                  <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="ofms-logo.png" alt="" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="relative">
-                <img className="" src="acai.png" alt="" srcset="" />
+                <img className="" src="acai.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
                   <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >Project Acai is Singapore’s First  <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#592D80] ">Acai Superfood Cafe</span></p>
-                  <img className=" self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" srcset="" />
+                  <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="relative">
-                <img className="" src="bigfoot.png" alt="" srcset="" />
+                <img className="" src="bigfoot.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
                   <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >Bigfoot is singapore’s largest <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#155B9F] "> logistics & supply chain Group</span></p>
-                  <img className=" self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" srcset="" />
+                  <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="bigfoot-logo.png" alt="" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="relative">
-                <img className="" src="youadme.png" alt="" srcset="" />
+                <img className="" src="youadme.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
                   <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >YouAdMe is a <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#FDCF09] ">Social Commerce Platform For Businesses</span></p>
-                  <img className=" self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" srcset="" />
+                  <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="youadme-logo.png" alt="" />
                 </div>
               </div>
             </SwiperSlide>
@@ -253,7 +292,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
         </div>
       </div>
 
-      <div className="px-4 py-16 bg-[#F4F6F5] w-[100vw]  mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
+      <div className="snap-start px-4 py-16 bg-[#F4F6F5] w-[100vw]  mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
         <h4 className="text-Primary-Colour tracking-widest font-semibold ">
           CUSTOMER TESTIMONIAL
         </h4>
@@ -297,8 +336,12 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           </Swiper>
         </div>
       </div>
-      <Footer />
-      <FooterBottom />
+      <div className="snap-start">
+        <Footer />
+      </div>
+      <div className="snap-start">
+        <FooterBottom />
+      </div>
     </div>
   );
 }
