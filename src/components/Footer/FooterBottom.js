@@ -6,7 +6,7 @@ export default function FooterBottom() {
     <div className="px-4 mvsm:px-6 md:px-20 msm:px-10 bg-secondary-2 flex flex-col items-center py-10 gap-3">
       <div className="grid gap-3 py-5 grid-cols-1  msm:grid-cols-2  lg:grid-cols-3">
         <div className=" flex  items-center flex-col">
-          <img className="h-20 w-20" src="big-foot-logo.png" alt="" />
+          <img className="h-20 w-20" src="../../big-foot-logo.png" alt="" />
           <p className="text-white my-4 msm:w-10/12 ">
             Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum
             is dummy text.Loreum ipsum is dummy text.Loreum{" "}

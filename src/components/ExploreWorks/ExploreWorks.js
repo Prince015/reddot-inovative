@@ -14,7 +14,8 @@ export default function ExploreWorks() {
         <div className="snap-y snap-mandatory overflow-auto h-screen scroll-pt-24 absolute">
             <div className='snap-start pt-24 h-screen hidden md:flex'>
                 <Outlet />
-                <div className='flex text-xl justify-around gap-9 flex-1 min-w-[25vw] px-5 py-6 font-bold flex-col '>
+                <div className='flex relative'>
+                <div className=' h-full flex text-xl justify-around gap-9 flex-1 min-w-[25vw] pl-5 lg:pl-8 py-6 font-bold flex-col '>
                     <NavLink
                         end
                         onMouseEnter={()=>{handleMouseEnter("/ourworks")}}
@@ -111,11 +112,13 @@ export default function ExploreWorks() {
                         Ofma
                     </NavLink>
                 </div>
+                <h2 style={{writingMode:"vertical-lr"}} className='absolute top-1/2 -translate-y-1/2 right-0 font-bold text-explore/work/vr pr-5 w-fit text-7xl lg:text-8xl'>Work</h2>
+                </div>
             </div>
             {/* <div className='snap-start pt-24 flex flex-col gap-5 md:hidden'> */}
-                <div className='md:hidden snap-start pt-24'><ExploreWorksBox bg='bg-Primary-Colour' title="EatsEzy" description="Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy " subtitle="Mobile App Design & Developement" image="mobile-mockup.png" /></div>
-                <div className='md:hidden snap-start my-5'><ExploreWorksBox bg='bg-[#D74008]' title="Bigfoot" description="Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy " subtitle="Mobile App Design & Developement" image="mobile-mockup.png" /></div>
-                <div className='md:hidden snap-start'><ExploreWorksBox bg='bg-[#592D80]' title="acai" description="Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy " subtitle="Mobile App Design & Developement" image="mobile-mockup.png" /></div>
+                <div className='md:hidden snap-start pt-24'><ExploreWorksBox bg='bg-Primary-Colour' title="EatsEzy" description="Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy " subtitle="Mobile App Design & Developement" image="../explore-eatzezy.png" /></div>
+                <div className='md:hidden snap-start my-5'><ExploreWorksBox bg='bg-[#D74008]' title="Bigfoot" description="Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy " subtitle="Mobile App Design & Developement" image="../explore-bigfoot.png" /></div>
+                <div className='md:hidden snap-start'><ExploreWorksBox bg='bg-[#592D80]' title="acai" description="Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy " subtitle="Mobile App Design & Developement" image="../explore-acai.png" /></div>
             {/* </div> */}
             <div className="snap-start">
                 <Footer />

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ServicesBox({icon,bg,phone}) {
   return (
-    <div className={` ${!phone && 'hidden'} msm:block bg-secondary-2 p-3`}>
+    <div className={` ${!phone && 'hidden'} msm:block bg-secondary-2 p-6`}>
       <h3 className="text-white text-xl sm:text-2xl msm:text-3xl md:text-4xl font-extrabold">
         Product <br /> Devlopement
       </h3>

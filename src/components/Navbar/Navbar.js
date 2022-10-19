@@ -14,7 +14,7 @@ export default function Navbar({visible,homeRef, aboutRef, industriesRef, servic
   return (
     <div className={`z-50 h-24 fixed bg-transparent backdrop-blur-3xl transition-all duration-150 ${visible ? 'top-0' : '-top-24'} items-center w-full flex justify-between py-4 px-4 mvsm:px-6 md:px-20 msm:px-10`}>
       <Link to="/">
-      <img className="h-16 w-auto" src="big-foot-logo.png" alt="logo" />
+      <img className="h-16 w-auto" src="../../big-foot-logo.png" alt="logo" />
       </Link>
       <div onClick={handleMenu} className="block smd:hidden">
         {isMenuOpen ? menuOpenIcon : menuCloseIcon}
@@ -100,7 +100,7 @@ export default function Navbar({visible,homeRef, aboutRef, industriesRef, servic
             Services
           </Link>
         </nav>
-        <button className="min-w-fit bg-secondary px-5 rounded-sm py-2 text-white font-bold text-base">
+        <button className="min-w-fit transition-colors duration-150 hover:bg-Primary-Colour bg-secondary px-5 rounded-sm py-2 text-white font-bold text-base">
           GET FREE QUOTE
         </button>
       </div>

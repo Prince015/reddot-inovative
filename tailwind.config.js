@@ -31,7 +31,8 @@ module.exports = {
         'my-yellow' : '#FAC850',
         'my-blue' : '#355ADE',
         'my-green' : '#35DDA1',
-        'my-white' : '#A8A8A8'
+        'my-white' : '#A8A8A8',
+        "explore/work/vr" :  'rgba(50, 54, 56, 0.1)',
       },
       outlineWidth:{
         '6' : '6px',

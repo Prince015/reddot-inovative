@@ -53,28 +53,28 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/ourworks" element={<ExploreWorks />} >
             <Route index element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'EatsEzy', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-Primary-Colour'
+              image: "../explore-eatzezy.png", title: 'EatsEzy', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-Primary-Colour'
             }} />} />
             <Route path="bigfoot" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'Bigfoot', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#D74008]'
+              image: "../explore-bigfoot.png", title: 'Bigfoot', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#D74008]'
             }} />} />
             <Route path="acai" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'Acai', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#592D80]'
+              image: "../explore-acai.png", title: 'Acai', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#592D80]'
             }} />} />
             <Route path="legate" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'LEGATE', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F47325]'
+              image: "../explore-legate.png", title: 'LEGATE', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F47325]'
             }} />} />
             <Route path="express-cart" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'Express Cart', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F7BE47]'
+              image: "../explore-express-cart.png", title: 'Express Cart', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F7BE47]'
             }} />} />
             <Route path="you-adme" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'YOU adme', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#FDCF09]'
+              image: "../explore-youadme.png", title: 'YOU adme', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#FDCF09]'
             }} />} />
             <Route path="orizon-motorcycles" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'Orizon Motorcycles', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F2994A]'
+              image: "../explore-orizon-motorcycles.png", title: 'Orizon Motorcycles', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F2994A]'
             }} />} />
             <Route path="osma" element={<EatsEzy state={{
-              image: "mobile-mockup.png", title: 'OFMS', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F79635]'
+              image: "../explore-OFMS.png", title: 'OFMS', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F79635]'
             }} />} />
           </Route>
         </Routes>

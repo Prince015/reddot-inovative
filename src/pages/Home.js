@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import FooterBottom from "../components/Footer/FooterBottom";
 import ServicesBox from "../components/Services/ServicesBox";
@@ -208,7 +208,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           </Swiper>
         </div>
       </div>
-      <div ref={ourWorksRef} className="snap-start relative bg-black h-screen my-16 py-16 flex flex-col items-center gap-5">
+      <div ref={ourWorksRef} className="snap-start relative bg-black h-[calc(100vh-96px)] my-16 py-16 flex flex-col items-center gap-5">
         <img className="absolute top-0 left-0 h-full opacity-40 object-cover" src="our-work.png" alt="" />
         <h4 className="text-Primary-Colour relative tracking-widest font-semibold ">
           OUR WORK
@@ -220,7 +220,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           EXPLORE OUR WORK
         </Link>
       </div>
-      <div className="snap-start px-4 w-[100vw] bg-white  pb-16  mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
+      <div className="snap-start py-8 px-4 w-[100vw] bg-white  pb-16  mvsm:px-6 md:px-20 msm:px-10 flex flex-col items-center gap-5">
         <h4 className="text-Primary-Colour tracking-widest font-semibold ">
           OUR SUCCESS
         </h4>
@@ -229,8 +229,8 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
         </h2>
         <div className="mt-5 w-full">
           <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
+            slidesPerView={window.innerWidth<430 ? 1 : 1.25}
+            spaceBetween={20}
             loop={true}
             pagination={{
               clickable: true,
@@ -247,7 +247,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
               <div className="relative">
                 <img className="" src="EATSEZY.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
-                  <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >Eatsezy is singapore’s restaurant  <span className=" font-bold leading-3 sm:leading-3 text-sm  mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-Primary-Colour ">table booking app</span></p>
+                  <p className=" text-[#232635CC] text-xl our_success_p self-end lg:text-3xl xl:text-[40px] xl:leading-tight font-medium" >Eatsezy is singapore’s restaurant  <span className=" font-bold text-sm  mvsm:text-2xl our_scuucess_span lg:text-4xl xl:text-5xl text-Primary-Colour ">table booking app</span></p>
                   <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="eatsezy-logo.png" alt="" />
                 </div>
               </div>
@@ -256,7 +256,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
               <div className="relative">
                 <img className="" src="ofms.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
-                  <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >OFMS is <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#F79635] "> a Luxury Real Estate and Facility Management.</span></p>
+                  <p className=" text-[#232635CC] text-xl our_success_p self-end lg:text-3xl xl:text-[40px] xl:leading-tight font-medium" >OFMS is <span className=" font-bold text-sm mvsm:text-2xl our_scuucess_span lg:text-4xl xl:text-5xl text-[#F79635] "> a Luxury Real Estate and Facility Management.</span></p>
                   <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="ofms-logo.png" alt="" />
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
               <div className="relative">
                 <img className="" src="acai.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
-                  <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >Project Acai is Singapore’s First  <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#592D80] ">Acai Superfood Cafe</span></p>
+                  <p className=" text-[#232635CC] text-xl our_success_p self-end lg:text-3xl xl:text-[40px] xl:leading-tight font-medium" >Project Acai is Singapore’s First  <span className=" font-bold text-sm mvsm:text-2xl our_scuucess_span lg:text-4xl xl:text-5xl text-[#592D80] ">Acai Superfood Cafe</span></p>
                   <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="big-foot-logo.png" alt="" />
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
               <div className="relative">
                 <img className="" src="bigfoot.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
-                  <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >Bigfoot is singapore’s largest <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#155B9F] "> logistics & supply chain Group</span></p>
+                  <p className=" text-[#232635CC] text-xl our_success_p self-end lg:text-3xl xl:text-[40px] xl:leading-tight font-medium" >Bigfoot is singapore’s largest <span className=" font-bold text-sm mvsm:text-2xl our_scuucess_span lg:text-4xl xl:text-5xl text-[#155B9F] "> logistics & supply chain Group</span></p>
                   <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="bigfoot-logo.png" alt="" />
                 </div>
               </div>
@@ -283,7 +283,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
               <div className="relative">
                 <img className="" src="youadme.png" alt="" />
                 <div className="absolute top-0 h-[41%] justify-between flex   left-1/4">
-                  <p className=" text-[#232635CC] self-end text-xs mvsm:text-xl leading-5 md:text-3xl lg:text-4xl  xl:text-5xl font-medium" >YouAdMe is a <span className=" font-bold leading-3 sm:leading-3 text-sm mvsm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#FDCF09] ">Social Commerce Platform For Businesses</span></p>
+                  <p className=" text-[#232635CC] text-xl our_success_p self-end lg:text-3xl xl:text-[40px] xl:leading-tight font-medium" >YouAdMe is a <span className=" font-bold text-sm mvsm:text-2xl our_scuucess_span lg:text-4xl xl:text-5xl text-[#FDCF09] ">Social Commerce Platform For Businesses</span></p>
                   <img className="mt-3 mr-3 self-start h-1/12 w-1/12" src="youadme-logo.png" alt="" />
                 </div>
               </div>
