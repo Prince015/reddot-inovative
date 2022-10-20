@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="px-4 mt-12 mvsm:px-6 md:px-20 msm:px-10 bg-secondary flex flex-col items-center py-10 gap-3">
+    <div className="px-4 mt-8 mvsm:px-6 md:px-20 msm:px-10 bg-secondary flex flex-col items-center py-10 gap-3">
       <p className="text-white tracking-widest font-semibold">
         NEED HELP? WE'RE READY.
       </p>

@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ContactUsBox from '../components/ContactUs/ContactUsBox'
 import FooterBottom from '../components/Footer/FooterBottom'
 
-export default function ContactUs() {
+export default function ContactUs({setVisible}) {
+
+    useEffect(() => {
+        setVisible(true)
+      }, [])
+
     return (
         <div className="w-full mvsm:mt-8 top-24 absolute">
-            <div className="relative  z-[-1] h-[70vh] msm:h-[60vh] lg:h-[80vh] xl:h-[90vh] px-6 mx-0 bg-secondary-2 md:mx-8 ">
-                <div className=''>
+            <div className="relative -z-[2] h-[70vh] msm:h-[60vh] lg:h-[80vh] xl:h-[90vh] px-6 mx-0 bg-secondary-2 md:mx-8 ">
+                <div className='z-[2]'>
                     <h1 className="text-2xl pt-16 mvsm:pt-16 vsm:text-3xl sm:text-4xl mvsm:text-5xl md:text-7xl  xl:text-8xl text-white font-black">
                         Let’s Innovate
                     </h1>
@@ -17,7 +22,7 @@ export default function ContactUs() {
                         together !
                     </h1>
                 </div>
-                <div className='absolute z-0 top-0 right-8 flex'>
+                <div className='absolute top-0 right-8 flex'>
                     <img className='sm:h-[50vh] h-full w-[30vw] msm:w-auto msm:h-[40vh] lg:h-[60vh] xl:h-[70vh]' src="Group-39416.svg" alt="" srcset="" />
                     <img className='sm:h-[40vh] h-full w-[30vw] msm:w-auto msm:h-[30vh] lg:h-[50vh] xl:h-[60vh]' src="Group-39417.svg" alt="" srcset="" />
                     <img className='sm:h-[45vh] h-full w-[30vw] msm:w-auto msm:h-[35vh] lg:h-[55vh] xl:h-[65vh]' src="Group-39416.svg" alt="" srcset="" />

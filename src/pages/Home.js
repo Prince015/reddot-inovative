@@ -15,9 +15,28 @@ import "./styles.css";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import TestimonialBox from "../components/Testimonial/TestimonialBox";
 import { Link } from "react-router-dom";
-export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, industriesRef, servicesRef }) {
+import { handleScroll } from "../components/Helper/Helper";
+
+export default function Home({setVisible, executeScroll, homeRef, ourWorksRef, aboutRef, industriesRef, servicesRef }) {
+  
+  let homeBody = document.getElementsByClassName("home_body")[0]
+  const [prevScrollpos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    if (!homeBody) {
+      homeBody = document.getElementsByClassName("home_body")[0]
+    }
+    homeBody?.addEventListener('scroll',()=>handleScroll(homeBody,prevScrollpos,setVisible,setPrevScrollPos));
+    return () => homeBody?.removeEventListener('scroll',()=>handleScroll(homeBody,prevScrollpos,setVisible,setPrevScrollPos))
+  },[homeBody?.scrollTop])
+
+  useEffect(() => {
+    setVisible(true)
+  }, [])
+  
+
   return (
-    <div className="absolute h-screen snap-mandatory scroll-pt-24 layout overflow-auto snap-y">
+    <div className="absolute home_body h-screen snap-mandatory layout overflow-auto snap-y">
       <div ref={homeRef} className="h-screen pt-24 snap-start  px-4 mvsm:px-6 md:px-20 msm:px-10">
         <div className="flex">
           <div className="relative w-full">
@@ -208,7 +227,7 @@ export default function Home({ executeScroll, homeRef, ourWorksRef, aboutRef, in
           </Swiper>
         </div>
       </div>
-      <div ref={ourWorksRef} className="snap-start relative bg-black h-[calc(100vh-96px)] my-16 py-16 flex flex-col items-center gap-5">
+      <div ref={ourWorksRef} className="snap-start relative bg-black h-screen my-16 py-16 flex flex-col items-center gap-5">
         <img className="absolute top-0 left-0 h-full opacity-40 object-cover" src="our-work.png" alt="" />
         <h4 className="text-Primary-Colour relative tracking-widest font-semibold ">
           OUR WORK

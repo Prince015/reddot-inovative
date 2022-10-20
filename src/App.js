@@ -48,33 +48,33 @@ function App() {
     <Router>
       <Navbar visible={visible}  executeScroll={executeScroll} servicesRef={servicesRef} industriesRef={industriesRef} homeRef={homeRef} aboutRef={aboutRef} />
         <Routes>
-          <Route path="/" element={<Home executeScroll={executeScroll} ourWorksRef={ourWorksRef} servicesRef={servicesRef} industriesRef={industriesRef} homeRef={homeRef} aboutRef={aboutRef} />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/ourworks" element={<ExploreWorks />} >
+          <Route path="/" element={<Home setVisible={setVisible} executeScroll={executeScroll} ourWorksRef={ourWorksRef} servicesRef={servicesRef} industriesRef={industriesRef} homeRef={homeRef} aboutRef={aboutRef} />} />
+          <Route path="/about-us" element={<AboutUs setVisible={setVisible} />} />
+          <Route path="/contact-us" element={<ContactUs setVisible={setVisible}/>} />
+          <Route path="/ourworks" element={<ExploreWorks setVisible={setVisible} />} >
             <Route index element={<EatsEzy state={{
-              image: "../explore-eatzezy.png", title: 'EatsEzy', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-Primary-Colour'
+             bg_image : "../explore-eatsezy-bg.png",image: "../explore-eatzezy.png", title: 'EatsEzy', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-Primary-Colour'
             }} />} />
             <Route path="bigfoot" element={<EatsEzy state={{
-              image: "../explore-bigfoot.png", title: 'Bigfoot', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#D74008]'
+             bg_image : "../explore-bigfoot-bg.png",image: "../explore-bigfoot.png", title: 'Bigfoot', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#D74008]'
             }} />} />
             <Route path="acai" element={<EatsEzy state={{
-              image: "../explore-acai.png", title: 'Acai', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#592D80]'
+             bg_image : "../explore-acai-bg.png",image: "../explore-acai.png", title: 'Acai', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#592D80]'
             }} />} />
             <Route path="legate" element={<EatsEzy state={{
-              image: "../explore-legate.png", title: 'LEGATE', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F47325]'
+             bg_image : "../explore-legate-bg.png",image: "../explore-legate.png", title: 'LEGATE', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F47325]'
             }} />} />
             <Route path="express-cart" element={<EatsEzy state={{
-              image: "../explore-express-cart.png", title: 'Express Cart', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F7BE47]'
+             bg_image : "null",image: "../explore-express-cart.png", title: 'Express Cart', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F7BE47]'
             }} />} />
             <Route path="you-adme" element={<EatsEzy state={{
-              image: "../explore-youadme.png", title: 'YOU adme', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#FDCF09]'
+             bg_image : "../explore-youadme-bg.png",image: "../explore-youadme.png", title: 'YOU adme', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#FDCF09]'
             }} />} />
             <Route path="orizon-motorcycles" element={<EatsEzy state={{
-              image: "../explore-orizon-motorcycles.png", title: 'Orizon Motorcycles', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F2994A]'
+             bg_image : "../explore-orizon-motors-bg.png",image: "../explore-orizon-motorcycles.png", title: 'Orizon Motorcycles', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F2994A]'
             }} />} />
             <Route path="osma" element={<EatsEzy state={{
-              image: "../explore-OFMS.png", title: 'OFMS', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F79635]'
+             bg_image : "../explore-ofms-bg.png",image: "../explore-OFMS.png", title: 'OFMS', shortDesc: "Mobile App Design & Developement", Description: "Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ipsum is dummy text.Loreum ", bg: 'bg-[#F79635]'
             }} />} />
           </Route>
         </Routes>

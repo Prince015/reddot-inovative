@@ -41,7 +41,11 @@ module.exports = {
         'testimonial': "0px 2px 9px rgb(0 0 0 / 25%)",
         'inovateBox' : "0px 0px 20px 1px #c9c9c9",
       },
-      
+      backgroundSize:{
+        'exploreWorksPhone' : "auto 80%"
+      },
+      backgroundPositionY:{
+        "aboutUsbgHero":"96px"}
     },
   },
   plugins: [],

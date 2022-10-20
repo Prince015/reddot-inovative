@@ -12,7 +12,7 @@ export default function Navbar({visible,homeRef, aboutRef, industriesRef, servic
     // console.log(isMenuOpen)
   }
   return (
-    <div className={`z-50 h-24 fixed bg-transparent backdrop-blur-3xl transition-all duration-150 ${visible ? 'top-0' : '-top-24'} items-center w-full flex justify-between py-4 px-4 mvsm:px-6 md:px-20 msm:px-10`}>
+    <div className={`z-50 h-24 top-0 left-0 fixed bg-white transition-all duration-150 ${visible ? 'top-0' : '-top-24'} items-center w-full flex justify-between py-4 px-4 mvsm:px-6 md:px-20 msm:px-10`}>
       <Link to="/">
       <img className="h-16 w-auto" src="../../big-foot-logo.png" alt="logo" />
       </Link>
