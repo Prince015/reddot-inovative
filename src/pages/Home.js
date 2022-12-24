@@ -36,7 +36,7 @@ export default function Home({setVisible, executeScroll, homeRef, ourWorksRef, a
   
 
   return (
-    <div className="absolute home_body h-screen snap-mandatory layout overflow-auto snap-y">
+    <div className="absolute home_body h-screen sm:snap-mandatory layout overflow-auto sm:snap-y">
       <div ref={homeRef} className="h-screen pt-24 snap-start  px-4 mvsm:px-6 md:px-20 msm:px-10">
         <div className="flex">
           <div className="relative w-full">
@@ -73,22 +73,13 @@ export default function Home({setVisible, executeScroll, homeRef, ourWorksRef, a
 
         </div>
         
-        <svg onClick={() => {
+        <div onClick={() => {
                 executeScroll(aboutRef);
-              }} className="w-fit cursor-pointer left-1/2 -translate-x-1/2 absolute bottom-24 lg:mt-0" width="36" height="56" viewBox="0 0 36 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="36" height="56" fill="#C9C9C9" />
-          <g clip-path="url(#clip0_1_82)">
-            <rect width="1440" height="8983" transform="translate(-702 -814)" fill="white" />
-            <rect width="1440" height="785" transform="translate(-702 -694)" fill="white" />
-            <rect x="1" y="1" width="34" height="54" rx="17" stroke="#222638" stroke-width="2" />
-            <path d="M18 12L18 20" stroke="#222638" stroke-width="2" stroke-linecap="round" />
-          </g>
-          <defs>
-            <clipPath id="clip0_1_82">
-              <rect width="1440" height="8983" fill="white" transform="translate(-702 -814)" />
-            </clipPath>
-          </defs>
-        </svg>
+              }} className=" border-2 border-secondary-2 rounded-full h-12 w-7 cursor-pointer left-1/2 -translate-x-1/2 absolute bottom-24 lg:mt-0" >
+          <div className="border bg-secondary-2 border-secondary-2 h-2 rounded-full mx-auto w-fit mt-2 animate-curser_upDown">
+            
+          </div>
+        </div>
       </div>
       <div ref={aboutRef} className=" snap-start px-4 mvsm:px-6 md:px-20 msm:px-10 bg-secondary-2  flex flex-col items-center py-16 gap-5">
         <h4 className="text-Primary-Colour tracking-widest font-semibold ">

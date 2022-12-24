@@ -1,16 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContactUsBox from '../components/ContactUs/ContactUsBox'
 import FooterBottom from '../components/Footer/FooterBottom'
+import { handleScroll } from '../components/Helper/Helper';
 
-export default function ContactUs({setVisible}) {
+export default function ContactUs({ setVisible }) {
+
+    let contactBody = document.getElementsByClassName("contact_body")[0]
+    const [prevScrollpos, setPrevScrollPos] = useState(0);
+
+    useEffect(() => {
+        if (!contactBody) {
+            contactBody = document.getElementsByClassName("contact_body")[0]
+        }
+        contactBody?.addEventListener('scroll', () => handleScroll(contactBody, prevScrollpos, setVisible, setPrevScrollPos));
+        return () => contactBody?.removeEventListener('scroll', () => handleScroll(contactBody, prevScrollpos, setVisible, setPrevScrollPos))
+    }, [contactBody?.scrollTop])
 
     useEffect(() => {
         setVisible(true)
-      }, [])
+    }, [])
 
     return (
-        <div className="w-full mvsm:mt-8 top-24 absolute">
-            <div className="relative -z-[2] h-[70vh] msm:h-[60vh] lg:h-[80vh] xl:h-[90vh] px-6 mx-0 bg-secondary-2 md:mx-8 ">
+        <div className="w-full  contact_body h-screen sm:snap-mandatory overflow-auto sm:snap-y absolute">
+            <div className="pt-24 snap-start relative -z-[2] h-[70vh] lg:h-[80vh] xl:h-[90vh] px-6 mx-0 bg-secondary-2 md:mx-8 ">
                 <div className='z-[2]'>
                     <h1 className="text-2xl pt-16 mvsm:pt-16 vsm:text-3xl sm:text-4xl mvsm:text-5xl md:text-7xl  xl:text-8xl text-white font-black">
                         Let’s Innovate
@@ -28,7 +40,7 @@ export default function ContactUs({setVisible}) {
                     <img className='sm:h-[45vh] h-full w-[30vw] msm:w-auto msm:h-[35vh] lg:h-[55vh] xl:h-[65vh]' src="Group-39416.svg" alt="" srcset="" />
                 </div>
             </div>
-            <div className='bg-white shadow-[0px_8px_16px_rgba(0,0,0,0.25)] mx-2 md:mx-14 -mt-10 mvsm:-mt-12 lg:-mt-16 px-3 py-4 mvsm:px-8 mvsm:py-14'>
+            <div className='snap-start bg-white shadow-[0px_8px_16px_rgba(0,0,0,0.25)] mx-2 md:mx-14 -mt-10 mvsm:-mt-12 lg:-mt-16 px-3 py-4 mvsm:px-8 mvsm:py-14'>
                 <h2 className='text-xl sm:text-2xl mvsm:text-3xl md:text-4xl xl:text-5xl  font-extrabold text-secondary-2'>
                     Tell Us About Your Requirements
                 </h2>
@@ -61,12 +73,18 @@ export default function ContactUs({setVisible}) {
                     </button>
                 </form>
             </div>
-            <div className='my-14'>
+            <div className='snap-start mt-14'>
                 <ContactUsBox country='SINGAPORE' address='7 TEMASEK BOULEVARD #12-07, SUNTEC TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='about-us-pattern.png' bg='bg-[#FFC8D2]' />
+            </div>
+            <div className='snap-start'>
                 <ContactUsBox country='INDIA' address='7 TEMASEK BOULEVARD #12-07, SUNTEC TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='india-office.png' bg='bg-[#CBE5FF]' />
+            </div>
+            <div className='snap-start mb-14'>
                 <ContactUsBox country='UAE' address='7 TEMASEK BOULEVARD #12-07, SUNTEC TOWER ONE, Singapore, 038987' number='+65 123456789' email='contact@reddotinnovative.com' image='uae-office.png' bg='bg-[#FEE5AB]' />
             </div>
-            <FooterBottom />
+            <div className="snap-start">
+                <FooterBottom />
+            </div>
         </div>
     )
 }

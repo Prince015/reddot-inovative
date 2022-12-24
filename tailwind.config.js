@@ -45,8 +45,20 @@ module.exports = {
         'exploreWorksPhone' : "auto 80%"
       },
       backgroundPositionY:{
-        "aboutUsbgHero":"96px"}
+        "aboutUsbgHero":"96px"
+      },
+      keyframes : {
+        curser_upDown : {
+          '0%': { marginTop : '4px' },
+          '100%': { marginTop: '16px' },
+        }
+      },
+      animation:{
+        curser_upDown : 'curser_upDown  0.7s ease-in-out infinite',
+      }
+      
     },
+    
   },
   plugins: [],
 };

@@ -49,7 +49,7 @@ function App() {
       <Navbar visible={visible}  executeScroll={executeScroll} servicesRef={servicesRef} industriesRef={industriesRef} homeRef={homeRef} aboutRef={aboutRef} />
         <Routes>
           <Route path="/" element={<Home setVisible={setVisible} executeScroll={executeScroll} ourWorksRef={ourWorksRef} servicesRef={servicesRef} industriesRef={industriesRef} homeRef={homeRef} aboutRef={aboutRef} />} />
-          <Route path="/about-us" element={<AboutUs setVisible={setVisible} />} />
+          <Route path="/about-us" element={<AboutUs executeScroll={executeScroll} setVisible={setVisible} />} />
           <Route path="/contact-us" element={<ContactUs setVisible={setVisible}/>} />
           <Route path="/ourworks" element={<ExploreWorks setVisible={setVisible} />} >
             <Route index element={<EatsEzy state={{

@@ -21,22 +21,22 @@ export default function Navbar({visible,homeRef, aboutRef, industriesRef, servic
       </div>
       <div className={`px-4 ${isMenuOpen ?'h-[90vh] overflow-y-auto py-8' : 'overflow-hidden h-0'} flex box-border flex-col gap-10  duration-200 transition-all ease-in-out   left-0 mvsm:px-6 smd:hidden top-24 absolute w-full bg-white`}>
         <div className="flex flex-col gap-6">
-          <div>
+          <Link onClick={()=>setIsMenuOpen(false)} to="/ourworks">
             <h2 className="text-Primary-Colour text-xl font-bold">Works</h2>
             <p className="text-my-white font-semibold">Our Creations</p>
-          </div>
-          <div>
+          </Link>
+          <Link onClick={()=>setIsMenuOpen(false)} to="/">
             <h2 className="text-Primary-Colour text-xl font-bold">Services</h2>
             <p className="text-my-white font-semibold">What we Offers</p>
-          </div>
-          <div>
+          </Link>
+          <Link onClick={()=>setIsMenuOpen(false)} to="/about-us">
             <h2 className="text-Primary-Colour text-xl font-bold">About Us</h2>
             <p className="text-my-white font-semibold">Get to know us</p>
-          </div>
-          <div>
+          </Link>
+          <Link onClick={()=>setIsMenuOpen(false)} to="/contact-us">
             <h2 className="text-Primary-Colour text-xl font-bold">Contacts</h2>
             <p className="text-my-white font-semibold">Find Us</p>
-          </div>
+          </Link>
         </div>
         <div>
           <h2 className="text-black text-2xl font-bold leading-8">WE CREATE DIGITAL EXPERIENCES</h2>
